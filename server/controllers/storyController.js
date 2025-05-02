@@ -103,10 +103,9 @@ const updateStory = async (req, res) => {
 // @access  Private/Admin
 const deleteStory = async (req, res) => {
   try {
-    const story = await Story.findById(req.params.id);
+    const result = await Story.findByIdAndDelete(req.params.id);
 
-    if (story) {
-      await story.remove();
+    if (result) {
       res.json({ message: 'Story removed' });
     } else {
       res.status(404).json({ message: 'Story not found' });
