@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General Styles */
+main {
+  min-height: 80vh;
+}
+
+.story-card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Carousel Styles */
+.story-carousel {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.story-carousel .carousel-indicators {
+  bottom: -40px;
+}
+
+.story-carousel .carousel-indicators button {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.story-carousel .carousel-indicators button.active {
+  background-color: #007bff;
+}
+
+.story-carousel .carousel-control-prev,
+.story-carousel .carousel-control-next {
+  width: 5%;
+  color: #007bff;
+}
+
+/* Admin Styles */
+.table-sm {
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .story-card {
+    margin-bottom: 20px;
+  }
+}
